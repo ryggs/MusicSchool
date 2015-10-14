@@ -12,6 +12,9 @@
 
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
+    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
+    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -117,7 +120,26 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h1>NOVOSTI I ŠKOLSKE AKTUELNOSTI</h1>
+            <!-- <h1>NOVOSTI I ŠKOLSKE AKTUELNOSTI</h1> -->
+            <br><br><div class="well">
+                <ul class="list-group">
+                    <li class="list-group-item"><h3>NOVOSTI I ŠKOLSKE AKTUELNOSTI</h3></li>
+                    <li class="list-group-item" style="text-align: center"><b>Kalendar aktivnosti za školsku 2015/16 godinu</b></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"><b>09. Septembar</b> – izlet (ekskurzija) za zaposlene</li>
+                    <li class="list-group-item"><b>20. Oktobar</b> - Komemorativna sednica i koncert povodom smrti našeg bivšeg direktora i nastavnika Slobodana Pandurovića;</li>
+                    <li class="list-group-item"><b>28. Oktobar</b> – prvi interni i javni čas</li>
+                    <li class="list-group-item"><b>27. i 28. novembar</b> – Smotra stvaralaštva srpskih kompozitora na Ubu i  akreditovani skup sa temom: Srpska muzika druge polovine 20 veka i doprinos kompozitora Dragoja Đenadera</li>
+                    <li class="list-group-item"><b>30. novembar</b> – Smotra stvaralaštva u Kulturnom centru Beograda – koncert najboljih učesnika po izboru stručnog dela publike</li>
+                    <li class="list-group-item"><b>8. decembar</b> – novogodišnji koncert, koncert učenika prvih razreda i maskenbal</li>
+                    <li class="list-group-item"><b>26. januar 2016. u 19:00 sati</b> – Svečana Svetosavska akademija (humanitarni koncert učenika i profesora škole u saradnji sa Gradskom bibliotekom Ub)</li>
+                    <li class="list-group-item"><b>18. - 23. april</b> – 14. Internacionalni Festival naše škole</li>
+                    <li class="list-group-item"><b>25. maj</b> –  Dan škole</li>
+                    <li class="list-group-item"><b>9. juni</b> – učešće učenika i profesora škole na proslavi Gradske i Hramovne slave - Spasovdana</li>
+                    <li class="list-group-item"><b>11. juni</b> – Revija muzičkih talenata u Velikom Gradištu</li>
+                    <li class="list-group-item"><b>14. juni</b> - Godišnji koncert na otvorenoj sceni - u školskom dvorištu</li>
+                </ul>
+            </div>
           </div>
           <div class="col-md-8">
             <div class="row">
@@ -143,7 +165,7 @@
             <h2>SVEČANA SVETOSAVSKA AKADEMIJA</h2>
             <hr class="divider-dash">
             <div class="col-md-6">
-              <p><b>Ponedeljak, 26. januara i utorak, 27. januara Svečana sala Muzičke škole</b></p>
+              <p><b>Januar, 2015 godine, Svečana sala Muzičke škole</b></p>
               <p>Gradska biblioteke „Božidar Knežević“ <br>Učenici i profesori Muzičke škole </p>
               <p>Organizcija: <br><br>
                 Crkvena opština Ub <br>
@@ -311,9 +333,7 @@
             </div><!-- col-md-6 -->
             <div class="col-md-6">
               <div id="contacts">
-               <div class="row">
-                 <!-- Alignment -->
-                <div>
+                 <div class="row">
                    <!-- Form itself -->
                    <div class="col-md-9">
                       <form name="sentMessage" class="form-horizontal" id="contactForm"  novalidate>
@@ -322,46 +342,50 @@
                             <div class="controls">
                               <input type="text" class="form-control" placeholder="Vaše ime *" id="name" required data-validation-required-message="Molimo unesite vaše ime" />
                               <p class="help-block"></p>
-                           </div>
-                         </div>
+                           </div> <!-- Controls -->
+                         </div> <!-- Control group -->
                          <div class="control-group">
                            <div class="controls">
                              <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Molimo unesite vaš email" />
-                           </div>
-                        </div>
+                           </div> <!-- Controls -->
+                        </div> <!-- Control group -->
                         <div class="control-group">
                           <div class="controls">
                             <textarea rows="10" cols="80" class="form-control" placeholder="Poruka *" id="message" required data-validation-required-message="Upišete vašu poruku" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
-                          </div>
-                        </div>
+                          </div> <!-- Controls -->
+                        </div> <!-- Control group -->
                         <div class="control-group">
                           <div class="controls">
                           <input class="form-inline  hide" type="text" name="some_field" required value="19"/>
                           <p class="help-block"></p>
-                        </div>
-                      </div>
+                        </div> <!-- Controls -->
+                      </div> <!-- Control group -->
                       <div class="control-group">
                         <div class="controls">
                           <img class="form-inline" src="images/cap.jpg" alt="">
                           <input class="form-inline" style="width: 75px" type="text" data-validation-required-message="Ovo polje je obavezno" data-validation-match-message="Saberite dva broja" data-validation-match-match="some_field" name="some_other_field"/>
                           <p class="help-block"></p>
-                        </div>
+                        </div> <!-- Controls -->
                         <div id="success"> </div> <!-- For success/fail messages -->
-                        <button type="submit" class="btn btn-primary pull-left download-list"><i class="fa fa-2x fa-paper-plane"></i>
-  SEND</button><br />
-                        <div class="control-group">
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-             </div>
-          </div>
-        </div>
+                        <button type="submit" class="btn btn-primary pull-left download-list"><i class="fa fa-2x fa-paper-plane"></i> SEND</button><br />
+                      </div> <!-- Control group -->
+                    </form> <!-- Form - sentMessage -->
+                  </div> <!-- col-md-9 -->
+                </div>  <!-- Row -->
+              </div>  <!-- Contacts -->
+            </div> <!-- col-md-6 -->
+          </div>  <!-- Row -->
+          <br>
+          <hr>
         <br>
-    </div><!-- row -->
+      <div class="row bottom">
+        <div class="col-md-4 pull-left">
+          <p>©2015 MŠ "Petar Stojanović"</p>
+        </div><!-- col-md-4 pull-left -->
+      </div><!-- Row -->
+    </div><!-- Container -->
     <br>
-    <br><br>
+
   </footer>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -370,6 +394,13 @@
     <script src="/bower_components/jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js"></script>
     <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="/bower_components/classie/classie.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

@@ -348,4 +348,34 @@ footer {
     color: $nav-color;
     font-size: 12px;
   }
+  .bottom {
+    font-family: $head-font;
+    font-weight: 700;
+    font-size: 0.6em;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+.footer-nonmain {
+  a {
+    padding-right: 10px;
+  }
+}
+//MONOGRAFIJA
+
+.monograf {
+  padding-top: 100px;
+  background-color: #333;
+  color: #E7E7E7;
+  .potpis {
+    font-size: 1em;
+    font-style: italic;
+  }
+  li {
+    font-size: 1.3em;
+  }
+  td {
+    font-size: 1.1em;
+  }
 }

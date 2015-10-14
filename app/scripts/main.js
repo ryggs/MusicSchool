@@ -36,7 +36,6 @@ $(document).ready(function(){
 
 	function scrollPage() {
 		var sy = scrollY();
-    console.log(dropdown);
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
 		}
@@ -115,19 +114,59 @@ $(document).ready(function(){
     filter: function() {
         return $(this).is(':visible');
     },
+  });
+
+  $('a[data-toggle=\"tab\"]').click(function(e) {
+      e.preventDefault();
+      $(this).tab('show');
+  });
+
+
+  /*When clicking on Full hide fail/success boxes */
+  $('#name').focus(function() {
+  'use strict';
+  $('#success').html('');
+    });
+
+    //GALLERY
+    blueimp.Gallery(
+    document.getElementById('links'), {
+        onslide: function (index, slide) {
+            var text = this.list[index].getAttribute('data-description'),
+                node = this.container.find('.description');
+            node.empty();
+            if (text) {
+                node[0].appendChild(document.createTextNode(text));
+            }
+        }
 });
 
-$('a[data-toggle=\"tab\"]').click(function(e) {
-    e.preventDefault();
-    $(this).tab('show');
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event, onslide: function (index, slide) {
+            var text = this.list[index].getAttribute('data-description'),
+                node = this.container.find('.description');
+            node.empty();
+            if (text) {
+                node[0].appendChild(document.createTextNode(text));
+            }
+        } },
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+
+//ADJUSTING COLUMN HEIGHTS IN COLUMN GRID
+var row=$('.row');
+$.each(row, function() {
+  var maxh=0;
+  $.each($(this).find('div[class^="col-"]'), function() {
+      if($(this).height() > maxh)
+          maxh=$(this).height();
+  });
+  $.each($(this).find('div[class^="col-"]'), function() {
+      $(this).height(maxh);
+  });
 });
-});
-
-
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-'use strict';
-$('#success').html('');
-
-
 });

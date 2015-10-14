@@ -206,7 +206,16 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the HTML file
     wiredep: {
       app: {
-        src: ['<%= config.app %>/index.html'],
+        src: [
+          '<%= config.app %>/index.html',
+          '<%= config.app %>/bilteni.html',
+          '<%= config.app %>/galerija.html',
+          '<%= config.app %>/letopis1.html',
+          '<%= config.app %>/letopis2.html',
+          '<%= config.app %>/letopis3.html',
+          '<%= config.app %>/monografija.html',
+          '<%= config.app %>/arhiva.html',
+        ],
         exclude: ['bootstrap.js'],
         ignorePath: /^(\.\.\/)*\.\./
       },
@@ -336,7 +345,10 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'docs/*.*',
+            'mail/*.*',
+            'pdf/**'
           ]
         }, {
           expand: true,
