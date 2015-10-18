@@ -15,23 +15,20 @@
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <style>
-      .prev {
-        background-color: #FFFFFF;
-        border-color: #cacaca;
-      }
-      .prev:hover {
-        background-color: #cacaca;
-        border-color: #cacaca;
-      }
-      body {
-        width: calc(100vw - 34px);
-       }
+    h1,h2,h3,h4,h5,h6 {
+      margin-bottom: 50px;
+      margin top: 80px;
+    }
+    img {
+      margin: 30px auto;
+    }
     </style>
     </head>
   <body>
@@ -73,7 +70,38 @@
   <!-- END NAVBAR -->
   <!-- main content -->
   <div class="monograf">
-    
+    <div class="container">
+      <div class="col-md-8 content" id="choice">
+
+      </div>
+      <div class="col-md-4 arhiva">
+        <form class="pull-right">
+          <select class="selectpicker" data-style="btn-inverse">
+            <optgroup label="Festivali">
+              <option value="13Fest">13. Festival</option>
+              <option value="12Fest">12. Festival</option>
+              <option value="11Fest">11. Festival</option>
+              <option value="10Fest">10. Festival</option>
+              <option value="9Fest">9. Festival</option>
+              <option value="8Fest">8. Festival</option>
+              <option value="7Fest">7. Festival</option>
+              <option value="6Fest">6. Festival</option>
+              <option value="5Fest">5. Festival</option>
+              <option value="4Fest">4. Festival</option>
+              <option value="3Fest">3. Festival</option>
+              <option value="2Fest">2. Festival</option>
+              <option value="1Fest">1. Festival</option>
+            </optgroup>
+            <optgroup label="Smotre stvaralaštva">
+              <option  value="4Smotra">4. Smotra stvaralaštva</option>
+              <option  value="3Smotra">3. Smotra stvaralaštva</option>
+              <option  value="2Smotra">2. Smotra stvaralaštva</option>
+              <option  value="1Smotra">1. Smotra stvaralaštva</option>
+            </optgroup>
+          </select>
+        </form>
+      </div>
+    </div>
   </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -89,6 +117,7 @@
     <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
     <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
     <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
+    <script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -121,6 +150,58 @@
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      var choice = $('#choice');
+      var id1;
+      choice.load('arhiv-data.html #13FestData');
+
+      $('.arhiva select').change(function () {
+        id1 = $(this).val();
+
+        choice.animate({opacity: 0}, 400, function() {
+          choice.load('arhiv-data.html #' + id1 + 'Data', function(){
+            choice.animate({opacity: 1}, 400)
+          });
+        });
+        // choice.load('arhiv-data.html #' + id1 + 'Data', function(){
+        //   choice.fadeIn('slow');
+        //});
+
+
+        // console.log(id1);
+        // console.log('arhiv-data.html #' + id1 + 'Data');
+        // return id1;
+      });
+
+
+      // $('.arhiva select').change(function() {
+      //   var sel = $(this).val();
+      //   console.log(sel);
+      //
+      //   $.getJSON('json/arhiva.js', function(result) {
+      //     console.log(result);
+      //     $.each(result, function(i, field) {
+      //       console.log(field);
+      //     });
+      //   });
+      // });
+    });
+    // $( "select" ).change(function (event) {
+    //   var sel = $(this).val();
+      //console.log(sel);
+
+
+
+      // $.getJSON('json/arhiva.json', function(result){
+      //   $.each(result, function(i, field){
+      //     $(".content").append(field + "\t");
+      //   });
+      // });
+    //});
     </script>
   </body>
 </html>

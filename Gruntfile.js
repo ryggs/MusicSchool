@@ -214,7 +214,7 @@ module.exports = function (grunt) {
           '<%= config.app %>/letopis2.html',
           '<%= config.app %>/letopis3.html',
           '<%= config.app %>/monografija.html',
-          '<%= config.app %>/arhiva.html',
+          '<%= config.app %>/arhiva.html'
         ],
         exclude: ['bootstrap.js'],
         ignorePath: /^(\.\.\/)*\.\./

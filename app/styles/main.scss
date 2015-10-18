@@ -9,6 +9,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
+
 //VARIABLES
 $nav-color: #8c0209;
 $head-font: 'Montserrat', sans-serif;
@@ -48,9 +49,13 @@ i {
     border-color: transparent;
     margin: 25px;
     transition: all 0.3s ease;
+
   }
   .navbar-default .navbar-nav>a {
     border-radius: 3px;
+    &:hover {
+      color: #FFFFFF;
+    }
     // -webkit-transition: padding .3s;
     // -moz-transition: padding .3s;
     // transition: padding .3s;
@@ -88,6 +93,10 @@ i {
   background-image: url('../images/logo.png');
   // width: 122px;
   padding-left: 60px;
+  color: #FFFFFF !important;
+  &:hover {
+    color :#777777  !important;
+  }
 }
 // .navbar-default {
 //   .navbar-brand{
@@ -354,6 +363,7 @@ footer {
     font-size: 0.6em;
     padding-left: 7.5%;
     padding-right: 7.5%;
+    padding-bottom: 20px;
   }
 }
 
@@ -378,4 +388,25 @@ footer {
   td {
     font-size: 1.1em;
   }
+}
+
+//ARHIVA
+.bootstrap-select {
+  top: 100px;
+  font-family: $head-font;
+  color: #000000;
+
+  .dropdown-menu {
+    li {
+      >a {
+        color: #777777;
+        &:hover {
+          color:#333333;
+        }
+      }
+    }
+  }
+}
+.dropdown-header {
+  color: #000000;
 }
