@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="">
+<html lang="SR">
   <head>
     <meta charset="utf-8">
     <title>Muzička škola "Petar Stojanović"</title>
-    <meta name="description" content="">
+    <meta name="Description" content="MUSIC SCHOOL PETAR STOJANOVIĆ, UB, SERBIA" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="MUZIČKA, ŠKOLA, PETAR, STOJANOVIĆ, UB, music, school, belgrade, serbia, festival, takmičenje, muzika, klavir, violina, gitara, harmonika, duvači, flauta" />
+    <meta name="Author" content="STFSOFT" />
+    <meta name="robots" content="INDEX,NOFOLLOW" />
+    <META HTTP-EQUIV="PRAGMA" CONTENT="no-cache">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="private, max-age=0, no-cache">
+
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta name="revisit-after" content="1" />
 
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css(.) styles/vendor.css -->
@@ -434,7 +441,7 @@
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      ga('create','UA-69005969-1');ga('send','pageview');
     </script>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -451,48 +458,6 @@
           });
           e.preventDefault();
         });
-        //NAVBAR ANIMATION
-        var cbpAnimatedHeader = (function() {
-
-        var docElem = document.documentElement,
-          header = document.querySelector( '.navbar-default' ),
-          dropdown = document.querySelector('.dropdown-menu'),
-          didScroll = false,
-          changeHeaderOn = 300;
-
-        function init() {
-          window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
-              didScroll = true;
-              setTimeout( scrollPage, 250 );
-            }
-          }, false );
-        }
-
-        function scrollPage() {
-          var sy = scrollY();
-          if ( sy >= changeHeaderOn ) {
-            classie.add( header, 'navbar-shrink' );
-          }
-          else {
-            classie.remove( header, 'navbar-shrink' );
-          }
-          if ( sy >= changeHeaderOn ) {
-            classie.add( dropdown, 'dropdown-shrink' );
-          }
-          else {
-            classie.remove( dropdown, 'dropdown-shrink' );
-          }
-          didScroll = false;
-        }
-
-          function scrollY() {
-            return window.pageYOffset || docElem.scrollTop;
-          }
-
-          init();
-
-        })();
 
         //MAIL FORM VALIDAION
 
