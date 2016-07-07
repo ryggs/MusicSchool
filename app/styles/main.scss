@@ -25,6 +25,7 @@ body {
   }
   p {
     font-size: 1.5em;
+    text-align: justify;
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: $head-font, serif;
@@ -42,6 +43,7 @@ i {
   font-family: $head-font;
   font-weight: 700;
   font-size: 1.2em;
+  background-color: $nav-color;
 }
 @media (min-width: 768px) {
   .navbar-default {
@@ -49,7 +51,6 @@ i {
     border-color: transparent;
     margin: 25px;
     transition: all 0.3s ease;
-
   }
   .navbar-default .navbar-nav>a {
     border-radius: 3px;
@@ -293,6 +294,7 @@ hr {
   }
   img {
     float: right;
+    margin-left: 10px;
   }
 }
 
@@ -409,4 +411,11 @@ footer {
 }
 .dropdown-header {
   color: #000000;
+}
+
+//MODAL
+.modal-body img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
