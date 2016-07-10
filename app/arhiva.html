@@ -8,10 +8,10 @@
     <meta name="keywords" content="MUZIČKA, ŠKOLA, PETAR, STOJANOVIĆ, UB, music, school, belgrade, serbia, festival, takmičenje, muzika, klavir, violina, gitara, harmonika, duvači, flauta" />
     <meta name="Author" content="STFSOFT" />
     <meta name="robots" content="INDEX,NOFOLLOW" />
-    <META HTTP-EQUIV="PRAGMA" CONTENT="no-cache">
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="private, max-age=0, no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="private, max-age=0, no-cache">
 
-    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta http-equiv="Expires" content="-1">
     <meta name="revisit-after" content="1" />
 
     <link rel="shortcut icon" href="/favicon.ico">
@@ -63,7 +63,7 @@
             <a href="" class="dropdown-toggle" data-toggle="dropdown">Izdavaštvo<b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li class="dropdown-header">Publikacije</li>
-              <li><a href="Monografija.html">Monografija</a></li>
+              <li><a href="monografija.html">Monografija</a></li>
               <li><a href="letopis1.html">Letopis 2008/09</a></li>
               <li><a href="#">Letopis 2012/13</a></li>
               <li><a href="letopis3.html">Letopis 2013/14</a></li>
@@ -87,7 +87,7 @@
       </div>
       <div class="col-md-4 arhiva">
         <form class="pull-right">
-          <select class="selectpicker" data-style="btn-inverse">
+          <select id="selectArhive" class="selectpicker" data-style="btn-inverse">
             <optgroup label="Festivali">
               <option value="13Fest">13. Festival</option>
               <option value="12Fest">12. Festival</option>
@@ -165,59 +165,5 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-
-      var choice = $('#choice');
-      var id1;
-      choice.load('arhiv-data.html #13FestData');
-
-      $('.arhiva select').change(function () {
-        id1 = $(this).val();
-
-        choice.animate({opacity: 0}, 400, function() {
-          choice.load('arhiv-data.html #' + id1 + 'Data', function(){
-            choice.animate({opacity: 1}, 400)
-          });
-        });
-        // choice.load('arhiv-data.html #' + id1 + 'Data', function(){
-        //   choice.fadeIn('slow');
-        //});
-
-
-        // console.log(id1);
-        // console.log('arhiv-data.html #' + id1 + 'Data');
-        // return id1;
-      });
-
-
-      // $('.arhiva select').change(function() {
-      //   var sel = $(this).val();
-      //   console.log(sel);
-      //
-      //   $.getJSON('json/arhiva.js', function(result) {
-      //     console.log(result);
-      //     $.each(result, function(i, field) {
-      //       console.log(field);
-      //     });
-      //   });
-      // });
-    });
-    // $( "select" ).change(function (event) {
-    //   var sel = $(this).val();
-      //console.log(sel);
-
-
-
-      // $.getJSON('json/arhiva.json', function(result){
-      //   $.each(result, function(i, field){
-      //     $(".content").append(field + "\t");
-      //   });
-      // });
-    //});
-    </script>
   </body>
 </html>

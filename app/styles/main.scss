@@ -73,6 +73,10 @@ i {
 .navbar-default .navbar-nav>.dropdown>.dropdown-toggle,
 .navbar-default .navbar-nav>li>a, {
     border-radius: 3px;
+
+    &:hover {
+      color: #777;
+    }
 }
 .navbar-default {
   .navbar-nav > li > a {
@@ -411,6 +415,12 @@ footer {
 }
 .dropdown-header {
   color: #000000;
+}
+
+.monograf {
+  .btn-inverse:hover {
+    background-color: #e7e7e7;
+  }
 }
 
 //MODAL

@@ -1,7 +1,4 @@
-//console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
-
-$(document).ready(function(){
-  'use strict';
+  //'use strict';
 
   //NAVBAR ANIMATION
   (function() {
@@ -51,11 +48,16 @@ $(document).ready(function(){
 
 
   //ARHIVA
-  // $('.selectpicker').selectpicker();
+  var choice = $('#choice');
+  var id1;
+  choice.load('arhiv-data.html #13FestData');
 
-  // $('select').change(function(){
-  //   console.log($(this).val());
-  // });
+  $('.arhiva select').change(function () {
+    id1 = $(this).val();
 
-
-});
+    choice.animate({opacity: 0}, 400, function() {
+      choice.load('arhiv-data.html #' + id1 + 'Data', function(){
+        choice.animate({opacity: 1}, 400);
+      });
+    });
+  });
