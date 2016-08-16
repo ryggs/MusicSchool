@@ -43,21 +43,24 @@
 
   })();
 
-
-
-
-
   //ARHIVA
   var choice = $('#choice');
   var id1;
+
+
   choice.load('arhiv-data.html #13FestData');
 
   $('.arhiva select').change(function () {
     id1 = $(this).val();
 
+
+
     choice.animate({opacity: 0}, 400, function() {
       choice.load('arhiv-data.html #' + id1 + 'Data', function(){
         choice.animate({opacity: 1}, 400);
+        //console.log(responseText);
+        //console.log(xhr);
+        //console.log(xhr);
       });
     });
   });
