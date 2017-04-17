@@ -8,7 +8,7 @@
 // If you want to recursively match all subfolders, use:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -130,14 +130,14 @@ module.exports = function (grunt) {
     },
 
     // Mocha testing framework configuration options
-    mocha: {
-      all: {
-        options: {
-          run: true,
-          urls: ['http://<%= browserSync.test.options.host %>:<%= browserSync.test.options.port %>/index.html']
-        }
-      }
-    },
+    // mocha: {
+    //   all: {
+    //     options: {
+    //       run: true,
+    //       urls: ['http://<%= browserSync.test.options.host %>:<%= browserSync.test.options.port %>/index.html']
+    //     }
+    //   }
+    // },
 
     // Compiles ES6 with Babel
     babel: {
@@ -386,7 +386,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', 'start the server and preview your app', function (target) {
+  grunt.registerTask('serve', 'start the server and preview your app', function(target) {
 
     if (target === 'dist') {
       return grunt.task.run(['build', 'browserSync:dist']);
@@ -402,12 +402,12 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('server', function (target) {
+  grunt.registerTask('server', function(target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run([target ? ('serve:' + target) : 'serve']);
   });
 
-  grunt.registerTask('test', function (target) {
+  grunt.registerTask('test', function(target) {
     if (target !== 'watch') {
       grunt.task.run([
         'clean:server',
@@ -417,8 +417,8 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
-      'browserSync:test',
-      'mocha'
+      'browserSync:test'
+      // 'mocha'
     ]);
   });
 

@@ -56,5 +56,8 @@
         2
       ]
     }
+  },
+  "dependencies": {
+    "node-sass": "^4.5.1"
   }
 }
