@@ -48,7 +48,7 @@
   var id1;
 
 
-  choice.load('arhiv-data.html #14FestData');
+  choice.load('arhiv-data.html #15FestData');
 
   $('.arhiva select').change(function () {
     id1 = $(this).val();
