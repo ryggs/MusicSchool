@@ -19,7 +19,7 @@
     "grunt-mocha": "^0.4.12",
     "grunt-newer": "^1.1.0",
     "grunt-postcss": "^0.6.0",
-    "grunt-sass": "^1.0.0",
+    "grunt-sass": "^1.2.1",
     "grunt-svgmin": "^2.0.1",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
@@ -58,6 +58,9 @@
     }
   },
   "dependencies": {
-    "node-sass": "^4.5.1"
+    "jpegtran-bin": "^3.2.0",
+    "node-sass": "^4.5.1",
+    "optipng": "^1.1.0",
+    "optipng-bin": "^4.0.0"
   }
 }
